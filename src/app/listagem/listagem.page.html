@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="">
+    <ion-title>Listagem</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+     Livros
+    </ion-list-header>
+
+
+    <ion-item-sliding *ngFor="let livro of lista">
+
+      <ion-item class="itens">
+        <ion-img id="logo" [src]="livro.logo"></ion-img>
+        <ion-label>
+          <h3>
+            <b>Titulo: </b> {{livro.titulo}}
+          </h3>
+          <h3>
+          <b>Autor: </b> {{livro.autor}}
+          </h3>
+          <h3>
+          <b>ISBN: </b> {{livro.isbn}}
+          </h3>
+        </ion-label>
+      </ion-item>
+
+      <ion-item-options side="end">
+      </ion-item-options>
+
+      <ion-item-options side="start">
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
+
+
+</ion-content>
